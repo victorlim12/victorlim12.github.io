@@ -1,0 +1,700 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: 	#EE4B2B;
+  --color-secondary: #462022;
+  --color-tertiary: #6B1f20;
+  --color-quaternary: #462022;
+  --color-quinary: #212224;
+  /*
+  --color-primary: #5192ED;
+  --color-secondary: #69A1F0;
+  --color-tertiary: #7EAEF2;
+  --color-quaternary: #90BAF5;
+  --color-quinary: #A2C4F5;
+  */
+}
+
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif,canada-type-gipson;
+}
+
+body{
+    background-color: black;
+    
+}
+.header{
+    min-height: 100vh;
+    width:100%;
+    background-image: linear-gradient(rgba(4,9,30,0.4),rgba(0,0,0,1)),url(images/DSC_1534psd2.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display:flex;
+    padding: 2% 0%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    
+    width: 150px;
+}
+
+.nav-links{
+    flex:1;
+    font-weight: bold;
+    text-align: center; 
+    animation: test 5s infinite;
+    position: static;
+}
+
+@keyframes test{
+    40%{text-shadow: 2px 4px rgba(0,0,0,1)}
+}
+
+.nav-links ul li{
+    list-style: none;
+    display:inline-block;
+    padding: 4px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: #f44336;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+
+.nav-links ul li:hover::after{
+    width:100%
+}
+
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align:center;
+}
+
+.text-box h1{
+    font-size: 20px;
+    min-height: 10vh;
+  font-family: canada-type-gibson, sans-serif;
+  font-weight: 300;
+  font-size: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.text-box h1 {
+  text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary),
+    9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+  font-family: bungee, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: calc(2rem + 5vw);
+  text-align: center;
+  margin: 0;
+  color: var(--color-primary);
+  //color: transparent;
+  //background-color: white;
+  //background-clip: text;
+  animation: shadows 1.2s ease-in infinite;
+  letter-spacing: 0.4rem;
+}
+
+@keyframes shadows {
+  0% {
+    text-shadow: none;
+  }
+  10% {
+    text-shadow: 3px 3px 0 var(--color-secondary);
+  }
+  20% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary);
+  }
+  30% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+  }
+  40% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  50% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  60% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  70% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+  }
+  80% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary);
+  }
+  90% {
+    text-shadow: 3px 3px 0 var(--color-secondary);
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  40% {
+    transform: translate(-12px, -12px);
+  }
+  50% {
+    transform: translate(-12px, -12px);
+  }
+  60% {
+    transform: translate(-12px, -12px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+.text-box p{
+    margin: 10px 0 25px;
+    font-size: 14px;
+    text-align: center;
+    color:#fff;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 25px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-btn:hover{
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1s;   
+}
+
+nav .fas{
+    display: none;
+}
+
+/*@media(max-width: 700px){
+    .text-box h1{
+    font-size: 20px ;
+}
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    
+    nav .fas{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    
+    .nav-links ul{
+        padding: 30px;
+    }
+}
+
+
+
+/*---- course----*/
+.course{
+      background-size: 1920px 900px;
+     background-image:  radial-gradient(circle, rgba(101,0,14,0) 0%, rgba(0,0,0,1) 55%),url(https://drive.google.com/uc?id=1IR4F_HFDZ6rZ4mWNQ1joBZ9dOKD_zTbh);
+    background-blend-mode: overlay;
+    background-position: 0ch -10em;
+    background-repeat: space;
+    padding-left: 10%;
+    padding-right:10%;
+    margin: auto;
+    text-align: center;
+    padding-top: 20px;
+    
+}
+
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.row{
+    margin-top: 3%;
+    text-align:  center;
+    display:inline-flex;
+    justify-content: space-between;
+}
+
+.photo-col{
+    flex-grow: 1;
+    transition: 0.5s; 
+padding: inherit;
+    margin: auto;
+    object-position: center;
+}
+
+.course-col{
+    flex-grow: 1;
+    border-radius: 10px;
+margin: auto;
+  margin-left: 5%;
+    box-sizing: border-box;
+    transition: 0.5s; 
+    text-align:left;
+}
+
+.course-col h1{
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 10%;
+    margin-bottom: auto;
+    font-size:80px;
+    color: ghostwhite;
+    flex-grow:0.8;
+    text-shadow: 4px 0 4px rgba(255,60,20,2);
+
+}
+
+.course-col h3{
+    text-align: left;
+    font-weight: 1200;
+    padding-left: 25px;
+    padding-top: 10px;
+    color: white;
+}
+    
+.boom{
+    text-align: left;
+    font-weight: 600;
+    padding-left: 25px;
+    padding-top: 10px;
+    color: lightgrey;
+    margin-bottom: 10%;
+}
+
+.mini{
+    font-size: 20px;
+    margin-bottom: -10%;
+    margin-top: 8%;
+    font-weight: 800;
+    padding-left: 25px;
+    color: antiquewhite;
+    text-shadow: 3px 0 2.5px rgba(255,255,20,1);
+}
+
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 0px 0;
+}
+
+
+.photo-col2{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    flex: 3;
+    padding-bottom: -5vh;
+    margin-bottom: -10%;
+    padding-right: 0px;
+    margin-left: 65%;
+    transition: 0.5s; 
+    object-position: right;
+    
+}
+
+.photo-col3{
+    display: flex;
+    position: relative;
+    flex-direction: column-reverse;
+    flex: 1;
+    padding-top: -10px;
+    margin-top: -4%;
+    margin-bottom: 0%;
+    padding-right: 0px;
+    margin-left: 50%;
+    transition: 0.5s; 
+    object-position: right;
+    
+}
+
+.photo-col:hover{
+     box-shadow: 0 0 40px 0px rgba(255,23,120,1);
+}
+
+
+.footer {
+  position:relative;
+  margin-top: 5%;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+    text-shadow: 2px 0 2px yellow;
+}
+
+.footer p{
+    
+background-color: firebrick;
+    color: ghostwhite;
+    font-weight: bold;
+}
+
+.work{
+     background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0)),url(images/gradient.jpg);
+    background-attachment:local;
+    background-position: center;
+    background-repeat: space;
+    text-align: center;
+    padding-top: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin: auto;
+}
+
+
+.row2{
+     display: flex;
+  flex-direction: column;
+  text-align: center;
+    justify-content:space-between;
+}
+
+.tabcontent{
+    margin-top:3%;
+}
+
+#galleryblock1 ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#galleryblock1 li {
+  height: 40vh;
+  flex-grow: 1;
+    list-style-type: none;
+}
+
+#galleryblock1 li:last-child {
+  // There's no science in using "10" here. In all my testing, this delivered the best results.
+  flex-grow: 10;
+}
+
+#galleryblock1 img {
+  max-height: 100%;
+  min-width: 100%;
+    padding: 5px;
+  object-fit: cover;
+    background-color: transparent;
+  vertical-align: bottom;
+}
+
+#galleryblock1 img:hover{
+     box-shadow: 0 0 40px 0px rgba(255,23,120,1);
+}
+#galleryblock2 ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#galleryblock2 li {
+  height: 40vh;
+  flex-grow: 1;
+    list-style-type: none;
+}
+
+#galleryblock2 li:last-child {
+  // There's no science in using "10" here. In all my testing, this delivered the best results.
+  flex-grow: 10;
+}
+
+#galleryblock2 img {
+  max-height: 100%;
+  min-width: 100%;
+    padding: 5px;
+  object-fit: cover;
+    background-color: transparent;
+  vertical-align: bottom;
+}
+
+#galleryblock2 img:hover{
+     box-shadow: 0 0 40px 0px rgba(255,23,120,1);
+}
+
+#galleryblock3 ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#galleryblock3 li {
+  height: 40vh;
+  flex-grow: 1;
+}
+
+#galleryblock3 li:last-child {
+  // There's no science in using "10" here. In all my testing, this delivered the best results.
+  flex-grow: 10;
+}
+
+#galleryblock3 img {
+  max-height: 100%;
+  min-width: 100%;
+    padding: 5px;
+  object-fit: cover;
+    background-color: transparent;
+  vertical-align: bottom;
+}
+
+#galleryblock3 img:hover{
+     box-shadow: 0 0 40px 0px rgba(255,23,120,1);
+}
+
+#galleryblock3 ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#galleryblock3 li {
+  height: 40vh;
+  flex-grow: 1;
+    list-style-type: none;
+}
+
+#galleryblock3 li:last-child {
+  // There's no science in using "10" here. In all my testing, this delivered the best results.
+  flex-grow: 10;
+}
+
+#galleryblock3 img {
+  max-height: 100%;
+  min-width: 100%;
+    padding: 5px;
+  object-fit: cover;
+    background-color: transparent;
+  vertical-align: bottom;
+}
+
+#galleryblock3 img:hover{
+     box-shadow: 0 0 40px 0px rgba(255,23,120,1);
+}
+
+.textheh{
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    text-align: center;
+    flex: 60%;
+    padding-bottom: 10px;
+    flex-basis: 1;
+}
+
+.textheh2{
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition: 0.5s; 
+    flex: 60%;
+}
+
+
+.textheh h2,.more h2{ 
+    margin-top: 2%;
+    font-size:80px;
+    color: ghostwhite;
+    text-align: center;
+    text-shadow: 4px 0 4px rgba(255,60,20,2);
+    flex-basis: 3;
+    
+}
+
+.textheh2 p{
+    margin-left: 0%;
+    margin-top:auto;
+    font-size:14px;
+    color: ghostwhite;
+    text-shadow: 4px 0 4px rgba(255,60,20,2);
+    background-color: black;
+}
+
+.textheh h2 p{
+    font-weight: 800;
+    color: ghostwhite;
+    text-shadow: 0px 0 0px rgba(255,60,20,2);
+}
+
+
+.tab {
+overflow: hidden;
+align-items: center;
+text-align: center; 
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    margin: auto;
+    flex:1;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center; 
+    position: static;
+    align-items: center;
+  color: white;
+    background-color: black;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    animation: fadeEffect 1s;
+  background-image: linear-gradient(darkred, black);
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    animation: fadeEffect 1s;
+  background-image: linear-gradient(darkred, black);
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+}
+
+.tabcontent {
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+.ending{
+    padding-top: 10px;
+}
+.ending h2{
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 3%;
+    color: white;
+}
+.more-col{
+    box-shadow: 0 0 30px 0px rgba(255,23,120,0.5);
+    flex-grow: 0.5;
+    border-radius: 10px;
+margin-left: 5%;
+    padding-top: 5px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    transition: 0.5s; 
+    text-align:center;
+}
+.more-col h3{
+    text-align: center;
+    font-weight: 1200;
+    padding-top: 10px;
+    color: white;
+}
+
+.more-col p{
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+}
+.more{
+      background-size: 1920px 900px;
+    background-repeat: space;
+    padding-left: 10%;
+    padding-right:10%;
+    margin: auto;
+    text-align: center;
+    padding-top: 20px;}
+
+.more ul{
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+     list-style-type: none;
+    margin-bottom: 5%;
+}
+from zero to full opacity */
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@media(max-width: 700px)
+{
+    .row{
+        flex-direction: column;
+    }
+
+}
